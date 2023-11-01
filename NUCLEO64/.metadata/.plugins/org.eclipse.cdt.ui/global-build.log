@@ -1,0 +1,16 @@
+08:31:26 **** Incremental Build of configuration Debug for project EXAMPLE_GPIO ****
+make -j8 all 
+arm-none-eabi-gcc -o "EXAMPLE_GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_GPIO\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXAMPLE_GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXAMPLE_GPIO.elf
+ 
+arm-none-eabi-size   EXAMPLE_GPIO.elf 
+arm-none-eabi-objdump -h -S  EXAMPLE_GPIO.elf  > "EXAMPLE_GPIO.list"
+arm-none-eabi-objcopy  -O ihex  EXAMPLE_GPIO.elf  "EXAMPLE_GPIO.hex"
+   text	   data	    bss	    dec	    hex	filename
+   5932	     20	   1572	   7524	   1d64	EXAMPLE_GPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: EXAMPLE_GPIO.list
+ 
+Finished building: EXAMPLE_GPIO.hex
+ 

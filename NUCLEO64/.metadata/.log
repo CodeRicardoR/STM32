@@ -1,0 +1,33 @@
+!SESSION 2023-11-01 08:01:11.006 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-01 08:01:51.713
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-01 08:01:51.713
+!MESSAGE Log4j2 initialized with config file C:\Users\ricar\Documents\STM32\NUCLEO64\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-01 08:01:56.346
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-11-01 08:20:24.530 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_PE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-01 08:20:33.424
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-01 08:20:33.424
+!MESSAGE Log4j2 initialized with config file C:\Users\ricar\Documents\STM32\NUCLEO64\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-01 08:20:36.091
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-01 08:25:13.797
+!MESSAGE Indexed 'EXAMPLE_GPIO' (19 sources, 81 headers) in 2.58 sec: 4,243 declarations; 17,958 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.009%)
