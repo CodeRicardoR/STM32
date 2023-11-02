@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "LCD_Library.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,7 +43,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+LCD_Struct_t LCD;
+LCD_PinType LCD_PIN[] = {LCD_D4_Pin, LCD_D5_Pin, LCD_D6_Pin, LCD_D7_Pin};
+LCD_PortType LCD_PORT[] = {LCD_D4_GPIO_Port, LCD_D5_GPIO_Port, LCD_D6_GPIO_Port, LCD_D7_GPIO_Port};
+GPIO_PinState PinValue;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,6 +67,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	LCD = LCD_Create(LCD_PORT, LCD_PIN, LCD_RS_GPIO_Port, LCD_RS_Pin, LCD_ENA_GPIO_Port, LCD_ENA_Pin);
 
   /* USER CODE END 1 */
 
@@ -86,15 +90,33 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+  LCD_Init(&LCD);
+  LCD_Command(&LCD, ClearDisplay);
+  LCD_Command(&LCD, ReturnHome);
+  LCD_Gotoxy(&LCD, 0, 0);
+  LCD_String(&LCD, "....STM32-F401RE....");
+  LCD_Gotoxy(&LCD, 0, 1);
+  LCD_String(&LCD, "    EXAMPLE GPIO");
+  LCD_Gotoxy(&LCD, 0, 2);
+  LCD_String(&LCD, " SWITCH PIN STATUS:");
+  LCD_Gotoxy(&LCD, 0, 3);
+  LCD_String(&LCD, "     'X' LOGICO");
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-	  HAL_Delay(200);
+	  //Lectura de GPIO INPUT: SWITCH
+	  PinValue = HAL_GPIO_ReadPin(SWITCH_GPIO_Port, SWITCH_Pin);
+
+	  LCD_Gotoxy(&LCD, 6, 3);
+	  if(PinValue == GPIO_PIN_RESET)
+		  LCD_Character(&LCD, '0');
+	  else
+		  LCD_Character(&LCD, '1');
+
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
