@@ -1,7 +1,0 @@
-../Peripheral/Src/LCD_Library.c:11:14:LCD_Create	1
-../Peripheral/Src/LCD_Library.c:28:6:LCD_Init	1
-../Peripheral/Src/LCD_Library.c:47:6:LCD_Command	3
-../Peripheral/Src/LCD_Library.c:72:6:LCD_Character	3
-../Peripheral/Src/LCD_Library.c:98:6:LCD_String	2
-../Peripheral/Src/LCD_Library.c:107:6:LCD_Gotoxy	5
-../Peripheral/Src/LCD_Library.c:133:6:LCD_CreateCharacter	2

@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -64,8 +64,8 @@ all: main-build
 main-build: EXAMPLE_INTERRUPTS.elf secondary-outputs
 
 # Tool invocations
-EXAMPLE_INTERRUPTS.elf EXAMPLE_INTERRUPTS.map: $(OBJS) $(USER_OBJS) /home/ricardo/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "EXAMPLE_INTERRUPTS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/ricardo/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXAMPLE_INTERRUPTS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+EXAMPLE_INTERRUPTS.elf EXAMPLE_INTERRUPTS.map: $(OBJS) $(USER_OBJS) C:\Users\ricar\Documents\STM32\Clone\STM32\NUCLEO64\EXAMPLE_INTERRUPTS\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "EXAMPLE_INTERRUPTS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ricar\Documents\STM32\Clone\STM32\NUCLEO64\EXAMPLE_INTERRUPTS\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXAMPLE_INTERRUPTS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

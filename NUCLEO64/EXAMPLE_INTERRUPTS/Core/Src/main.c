@@ -31,7 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define KEYPAD_PinType uint16_t
+#define KEYPAD_PortType GPIO_TypeDef*
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -40,18 +41,33 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
+typedef struct{
+	KEYPAD_PortType *dataport;
+	KEYPAD_PinType *datapin;
+}KEYPAD_Struct_t;
 /* USER CODE BEGIN PV */
+// PARA LCD
 LCD_Struct_t LCD;
 LCD_PinType LCD_PIN[] = {LCD_D4_Pin, LCD_D5_Pin, LCD_D6_Pin, LCD_D7_Pin};
 LCD_PortType LCD_PORT[] = {LCD_D4_GPIO_Port, LCD_D5_GPIO_Port, LCD_D6_GPIO_Port, LCD_D7_GPIO_Port};
+
+// PARA KEYPAD
+KEYPAD_Struct_t KEYPAD;
+KEYPAD_PortType KEYPAD_PORT[] = {FIL_0_GPIO_Port, FIL_1_GPIO_Port, FIL_2_GPIO_Port, FIL_3_GPIO_Port};
+KEYPAD_PinType KEYPAD_PIN[] = {FIL_0_Pin, FIL_1_Pin, FIL_2_Pin, FIL_3_Pin};
+
+volatile uint8_t conta;
+volatile char KEY;
+volatile bool flag = false;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
+KEYPAD_Struct_t KEYPAD_Create(KEYPAD_PortType port[], KEYPAD_PinType pin[]);
+void FILA_SET(KEYPAD_Struct_t *KEYPAD, uint8_t valor);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -67,6 +83,8 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 	LCD = LCD_Create(LCD_PORT, LCD_PIN, LCD_RS_GPIO_Port, LCD_RS_Pin, LCD_ENA_GPIO_Port, LCD_ENA_Pin);
+	KEYPAD = KEYPAD_Create(KEYPAD_PORT, KEYPAD_PIN);
+
 
   /* USER CODE END 1 */
 
@@ -96,13 +114,24 @@ int main(void)
   LCD_String(&LCD, "....STM32-F401RE....");
   LCD_Gotoxy(&LCD, 0, 1);
   LCD_String(&LCD, "      *KEYPAD*");
-
+  LCD_Gotoxy(&LCD, 0, 2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  conta = 0;
   while (1)
   {
+	  FILA_SET(&KEYPAD, conta);
+	  HAL_Delay(25);
+	  conta++;
+	  if(conta>=4){
+		  conta = 0;
+	  }
+	  if(flag){
+		  LCD_Character(&LCD, KEY);
+		  flag = false;
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -191,7 +220,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : COL_0_Pin COL_1_Pin COL_2_Pin COL_3_Pin */
   GPIO_InitStruct.Pin = COL_0_Pin|COL_1_Pin|COL_2_Pin|COL_3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LCD_D4_Pin LCD_D5_Pin LCD_D6_Pin LCD_D7_Pin */
@@ -219,6 +248,49 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+KEYPAD_Struct_t KEYPAD_Create(KEYPAD_PortType port[], KEYPAD_PinType pin[]){
+	KEYPAD_Struct_t KEYPAD;
+
+	KEYPAD.dataport = port;
+	KEYPAD.datapin = pin;
+
+	return KEYPAD;
+}
+void FILA_SET(KEYPAD_Struct_t *KEYPAD, uint8_t valor){
+	uint8_t conta, val;
+
+	val = 1<<valor;
+	for(conta=0; conta < 4; conta++){
+		HAL_GPIO_WritePin(KEYPAD->dataport[conta], KEYPAD->datapin[conta], (val>>conta)&0x01);
+	}
+	return;
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	char keys[4][4] = {{'7', '8', '9', '/'},
+			{'4', '5', '6', '*'},
+			{'1', '2', '3', '-'},
+			{'N', '0', '=', '+'}};
+
+	switch (GPIO_Pin) {
+	case COL_0_Pin:
+		KEY = keys[conta][0];
+		break;
+	case COL_1_Pin:
+		KEY = keys[conta][1];
+		break;
+	case COL_2_Pin:
+		KEY = keys[conta][2];
+		break;
+	case COL_3_Pin:
+		KEY = keys[conta][3];
+		break;
+	default:
+		break;
+	}
+	flag = true;
+}
 
 /* USER CODE END 4 */
 

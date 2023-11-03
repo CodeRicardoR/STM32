@@ -24,7 +24,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
- /home/ricardo/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/Peripheral/Inc/LCD_Library.h
+ C:/Users/ricar/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/Peripheral/Inc/LCD_Library.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -51,4 +51,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
-/home/ricardo/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/Peripheral/Inc/LCD_Library.h:
+C:/Users/ricar/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/Peripheral/Inc/LCD_Library.h:
