@@ -1,0 +1,2 @@
+../Peripheral/Src/ADC_Library.c:11:10:Read_Channel	40	static
+../Peripheral/Src/ADC_Library.c:31:7:DataConversion	24	static

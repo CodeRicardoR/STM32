@@ -1,0 +1,40 @@
+2023-11-10 00:33:29,088 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 902709672 Bytes (1073741824)
+2023-11-10 00:33:29,145 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-11-10 00:33:29,145 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-11-10 00:33:29,146 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2023-11-10 00:33:29,334 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-11-10 00:33:29,334 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-11-10 00:33:29,335 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-11-10 00:33:29,335 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-11-10 00:33:29,335 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-11-10 00:33:29,336 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.1.202307191849\\db\
+2023-11-10 00:33:29,509 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\MXTmpFiles\license.tmp_save
+2023-11-10 00:33:29,610 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\MXTmpFiles\license.tmp
+2023-11-10 00:33:29,661 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\gpio.c_save
+2023-11-10 00:33:29,775 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\gpio.c
+2023-11-10 00:33:29,791 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\gpio.h_save
+2023-11-10 00:33:29,885 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\gpio.h
+2023-11-10 00:33:29,971 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\adc.c_save
+2023-11-10 00:33:30,067 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\adc.c
+2023-11-10 00:33:30,087 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\adc.h_save
+2023-11-10 00:33:30,157 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\adc.h
+2023-11-10 00:33:30,185 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\stm32f4xx_it.c_save
+2023-11-10 00:33:30,462 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\stm32f4xx_it.c
+2023-11-10 00:33:30,471 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\stm32f4xx_it.h_save
+2023-11-10 00:33:30,562 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\stm32f4xx_it.h
+2023-11-10 00:33:30,587 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\stm32f4xx_hal_msp.c_save
+2023-11-10 00:33:30,677 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\stm32f4xx_hal_msp.c
+2023-11-10 00:33:30,687 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\MXTmpFiles\system.tmp_save
+2023-11-10 00:33:30,729 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\MXTmpFiles\system.tmp
+2023-11-10 00:33:30,753 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-11-10 00:33:30,853 [INFO] CodeEngine:335 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\stm32f4xx_hal_conf.h
+2023-11-10 00:33:30,929 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\main.h_save
+2023-11-10 00:33:31,114 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Inc\main.h
+2023-11-10 00:33:31,136 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\main.c_save
+2023-11-10 00:33:31,233 [INFO] CodeEngine:279 - Generated code: C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\Core\Src\main.c
+2023-11-10 00:33:31,803 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 188mS.
+2023-11-10 00:33:31,806 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-11-10 00:33:32,010 [INFO] ConfigFileManager:1457 - The Die is : DIE433
+2023-11-10 00:33:33,513 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1707mS.
+2023-11-10 00:33:33,514 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-11-10 00:33:33,529 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

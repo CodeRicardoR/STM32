@@ -1,0 +1,16 @@
+/*
+ * ADC_Library.c
+ *
+ *  Created on: Nov 5, 2023
+ *      Author: ricar
+ */
+#include "ADC_Library.h"
+
+uint32_t Read_Channel(){
+	uint32_t ChannelValue=0;
+
+
+	return ChannelValue;
+}
+
+

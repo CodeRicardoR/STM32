@@ -1,17 +1,28 @@
-11:39:37 **** Incremental Build of configuration Debug for project EXAMPLE_INTERRUPTS ****
+00:34:54 **** Incremental Build of configuration Debug for project EXAMPLE_ADC ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/home/ricardo/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/Peripheral/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "EXAMPLE_INTERRUPTS.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ricardo/Documents/STM32/Clone/STM32/NUCLEO64/EXAMPLE_INTERRUPTS/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXAMPLE_INTERRUPTS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: EXAMPLE_INTERRUPTS.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/ricar/Documents/STM32/NUCLEO64/EXAMPLE_ADC/Peripheral/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:168:40: warning: unused variable 'channel_10' [-Wunused-variable]
+  168 |         uint32_t channel_1, channel_2, channel_10, channel_temp;
+      |                                        ^~~~~~~~~~
+arm-none-eabi-gcc -o "EXAMPLE_ADC.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ricar\Documents\STM32\NUCLEO64\EXAMPLE_ADC\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXAMPLE_ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: EXAMPLE_ADC.elf
  
-arm-none-eabi-size   EXAMPLE_INTERRUPTS.elf 
-arm-none-eabi-objdump -h -S  EXAMPLE_INTERRUPTS.elf  > "EXAMPLE_INTERRUPTS.list"
-arm-none-eabi-objcopy  -O ihex  EXAMPLE_INTERRUPTS.elf  "EXAMPLE_INTERRUPTS.hex"
+arm-none-eabi-size   EXAMPLE_ADC.elf 
+arm-none-eabi-objdump -h -S  EXAMPLE_ADC.elf  > "EXAMPLE_ADC.list"
+arm-none-eabi-objcopy  -O ihex  EXAMPLE_ADC.elf  "EXAMPLE_ADC.hex"
    text	   data	    bss	    dec	    hex	filename
-   7332	     44	   1596	   8972	   230c	EXAMPLE_INTERRUPTS.elf
+  12556	    124	   1996	  14676	   3954	EXAMPLE_ADC.elf
 Finished building: default.size.stdout
  
-Finished building: EXAMPLE_INTERRUPTS.hex
+Finished building: EXAMPLE_ADC.hex
  
-Finished building: EXAMPLE_INTERRUPTS.list
+Finished building: EXAMPLE_ADC.list
+ 
+00:35:06 **** Incremental Build of configuration Debug for project EXAMPLE_ADC ****
+make -j8 all 
+arm-none-eabi-size   EXAMPLE_ADC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12556	    124	   1996	  14676	   3954	EXAMPLE_ADC.elf
+Finished building: default.size.stdout
  
